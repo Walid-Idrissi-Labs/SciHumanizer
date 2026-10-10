@@ -1,0 +1,33 @@
+scientific   human 223 texts, AI 60 texts
+abstract     human 192 texts, AI 40 texts
+general      human 333 texts, AI 40 texts
+
+AUC = P(AI rate > human rate); held-out = lists built on the other half of the documents
+register     list            in-sample  held-out
+scientific   glue                0.026     0.039
+scientific   human_function      0.195     0.246
+scientific   ai_function         0.853     0.756
+scientific   ai_content          0.979     0.907
+scientific   human_content       0.321     0.314
+abstract     glue                0.050     0.053
+abstract     human_function      0.122     0.179
+abstract     ai_function         0.628     0.443
+abstract     ai_content          0.847     0.783
+abstract     human_content       0.432     0.435
+general      glue                0.182     0.216
+general      human_function      0.312     0.354
+general      ai_function         0.631     0.754
+general      ai_content          0.876     0.764
+general      human_content       0.335     0.353
+
+glue (4): être -17/-10/-10, en -5/-3/-7, avoir -13/-8/-7, dans -4/-6/-1
+
+ai_function (1): ce +12/+2/+4
+
+ai_content (21): constituer +10/+4/+3, demeurer +9/+2/+7, offrir +7/+8/+2, contexte +9/+1/+3, largement +5/+0/+7, décennie +3/-1/+8, compréhension +6/+5/-0, particulièrement +7/+3/+3, révéler +6/+4/+2, contribuer +5/+5/-1, rester +3/+1/+6, directement +4/+1/+5, majeur +4/+2/+5, plutôt +3/+1/+5, critique +4/+4/+1, créer +4/+0/+4, enjeu +4/-1/+4, reconnaître +5/+0/+3, simple +4/+2/+3, approche +4/+3/+2, réduire +3/+3/+2
+
+human_content (1): faire -5/-2/-4
+
+human_function (5): il -7/-4/-5, nous -6/-6/-4, on -6/-3/-2, très -4/-2/-4, alors -4/-2/-4
+
+wrote scripts/data/markers_fr.json

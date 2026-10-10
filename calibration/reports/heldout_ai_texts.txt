@@ -1,0 +1,24 @@
+en.scientific  ai_test_baseline/test_sci_disc.txt                704 words  composite 1.48  threshold 0.67  classic 0  FAIL
+en.scientific  ai_test_baseline/test_sci_intro.txt               694 words  composite 1.57  threshold 0.67  classic 0  FAIL
+en.scientific  ai_test_baseline_haiku/test_sci_disc.txt          620 words  composite 1.82  threshold 0.67  classic 0  FAIL
+en.scientific  ai_test_baseline_haiku/test_sci_intro.txt         428 words  composite 1.53  threshold 0.66  classic 0  FAIL
+en.general     ai_test_baseline/test_gen_oped.txt                677 words  composite 1.11  threshold 0.67  classic 0  FAIL
+en.general     ai_test_baseline/test_gen_review.txt              505 words  composite 0.77  threshold 0.66  classic 0  FAIL
+en.general     ai_test_baseline_haiku/test_gen_oped.txt          527 words  composite 1.57  threshold 0.66  classic 2  FAIL
+en.general     ai_test_baseline_haiku/test_gen_review.txt        571 words  composite 0.88  threshold 0.67  classic 0  FAIL
+en.general     calib/ai_haiku_extra/general/gen_20.txt           600 words  composite 1.50  threshold 0.68  classic 1  FAIL
+en.general     calib/ai_haiku_extra/general/gen_21.txt           350 words  composite 1.45  threshold 0.65  classic 1  FAIL
+en.general     calib/ai_haiku_extra/general/gen_22.txt           370 words  composite 1.81  threshold 0.65  classic 0  FAIL
+en.general     calib/ai_haiku_extra/general/gen_23.txt           441 words  composite 1.66  threshold 0.65  classic 1  FAIL
+en.general     calib/ai_haiku_extra/general/gen_24.txt           533 words  composite 1.81  threshold 0.66  classic 0  FAIL
+en.general     calib/ai_haiku_extra/general/gen_25.txt           529 words  composite 1.66  threshold 0.66  classic 0  FAIL
+en.general     calib/ai_haiku_extra/general/gen_26.txt           493 words  composite 1.67  threshold 0.66  classic 1  FAIL
+fr.scientific  ai_test_fr/sonnet/test_fr_sci_disc.txt            669 words  composite 1.28  threshold 0.65  classic 2  FAIL
+fr.scientific  ai_test_fr/sonnet/test_fr_sci_intro.txt           698 words  composite 1.13  threshold 0.65  classic 1  FAIL
+fr.scientific  ai_test_fr/haiku/test_fr_sci_disc.txt             727 words  composite 1.46  threshold 0.64  classic 2  FAIL
+fr.scientific  ai_test_fr/haiku/test_fr_sci_intro.txt            692 words  composite 1.26  threshold 0.65  classic 2  FAIL
+fr.general     ai_test_fr/sonnet/test_fr_gen_analyse.txt         754 words  composite 1.50  threshold 0.69  classic 0  FAIL
+fr.general     ai_test_fr/sonnet/test_fr_gen_tribune.txt         609 words  composite 0.84  threshold 0.68  classic 0  FAIL
+fr.general     ai_test_fr/haiku/test_fr_gen_analyse.txt          742 words  composite 1.40  threshold 0.69  classic 0  FAIL
+fr.general     ai_test_fr/haiku/test_fr_gen_tribune.txt          625 words  composite 0.98  threshold 0.68  classic 0  FAIL
+23 texts, 0 pass the gate; composites 0.77 to 1.82

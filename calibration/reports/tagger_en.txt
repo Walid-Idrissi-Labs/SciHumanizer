@@ -1,0 +1,3 @@
+gold tokens 100701 | aligned 99158 (98.5%) | tag accuracy 0.9100
+top confusions (gold -> predicted): [(('NOUN', 'PROPN'), 2391), (('ADP', 'TO'), 1113), (('ADJ', 'PROPN'), 814), (('VERB', 'NOUN'), 654), (('ADJ', 'NOUN'), 407), (('NOUN', 'VERB'), 325), (('NOUN', 'ADJ'), 283), (('PROPN', 'NOUN'), 215), (('DET', 'ADV'), 208), (('DET', 'SCONJ'), 207), (('ADV', 'ADP'), 183), (('ADJ', 'VERB'), 175)]
+noun/verb: NOUN->NOUN 20891, NOUN->VERB 325, VERB->NOUN 654, VERB->VERB 9964

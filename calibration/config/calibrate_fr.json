@@ -1,0 +1,6 @@
+{"run": "runs/measurements_fr.jsonl",
+ "registers": {
+  "fr.scientific": {"human": ["H_fr_scientific"], "ai": {"Sonnet tier": ["A_fr_scientific"], "Haiku tier": ["Ah_fr_scientific"]}},
+  "fr.abstract": {"human": ["H_fr_abstract"], "ai": {"Sonnet tier": ["A_fr_abstract"], "Haiku tier": ["Ah_fr_abstract"]}},
+  "fr.general": {"human": ["H_fr_general"], "ai": {"Sonnet tier": ["A_fr_general"], "Haiku tier": ["Ah_fr_general"]}}
+ }}

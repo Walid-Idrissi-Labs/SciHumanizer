@@ -1,0 +1,35 @@
+{
+ "lang": "en",
+ "registers": {
+  "scientific": {
+   "human": [
+    "calib/human/scientific"
+   ],
+   "ai": [
+    "calib/ai/scientific",
+    "calib/ai_haiku/scientific"
+   ]
+  },
+  "abstract": {
+   "human": [
+    "calib/human/abstract"
+   ],
+   "ai": [
+    "calib/ai/abstract",
+    "calib/ai_haiku/abstract"
+   ]
+  },
+  "general": {
+   "human": [
+    "calib/human/general_modern"
+   ],
+   "ai": [
+    "calib/ai/general",
+    "calib/ai_haiku/general",
+    "calib/ai/general_modern",
+    "calib/ai_haiku/general_modern"
+   ]
+  }
+ },
+ "exclude": []
+}

@@ -1,0 +1,3 @@
+gold tokens 8477 | aligned 8292 (97.8%) | tag accuracy 0.9052
+top confusions (gold -> predicted): [(('ADP', 'DET'), 274), (('NOUN', 'PROPN'), 89), (('ADJ', 'NOUN'), 43), (('NOUN', 'ADJ'), 38), (('VERB', 'AUX'), 38), (('ADJ', 'VERB'), 30), (('ADJ', 'PROPN'), 24), (('PROPN', 'NOUN'), 22), (('NOUN', 'VERB'), 18), (('VERB', 'NOUN'), 17)]
+OOV tokens (not proper nouns): 130 = 1.57% of aligned; examples: ['sahraouis', 'sahraouie', 'bilatérales', 'décentrement', 'lituanienne', 'subsaharienne', 'déstabilisation', 'observerez', 'intégriste', 'intégristes', 'modernisée', 'dictatoriale', 'chérifien', 'irakisation', 'somalisation']

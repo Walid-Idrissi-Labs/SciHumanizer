@@ -1,0 +1,37 @@
+{
+ "lang": "fr",
+ "registers": {
+  "scientific": {
+   "human": [
+    "calib/fr/human/scientific"
+   ],
+   "ai": [
+    "calib/fr/ai_sonnet/scientific",
+    "calib/fr/ai_haiku/scientific"
+   ]
+  },
+  "abstract": {
+   "human": [
+    "calib/fr/human/abstract"
+   ],
+   "ai": [
+    "calib/fr/ai_sonnet/abstract",
+    "calib/fr/ai_haiku/abstract"
+   ]
+  },
+  "general": {
+   "human": [
+    "calib/fr/human/general"
+   ],
+   "ai": [
+    "calib/fr/ai_sonnet/general",
+    "calib/fr/ai_haiku/general"
+   ]
+  }
+ },
+ "exclude": [
+  "imagerie",
+  "social",
+  "clinique"
+ ]
+}

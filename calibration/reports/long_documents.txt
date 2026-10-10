@@ -1,0 +1,12 @@
+en.scientific human long texts: n=37, scored in windows: 37, windows per text median 2, PASS 86%
+   AI pseudo-documents from calib/ai/scientific: n=10, PASS 0%
+   AI pseudo-documents from calib/ai_haiku/scientific: n=10, PASS 0%
+en.general human long texts: n=67, scored in windows: 67, windows per text median 2, PASS 88%
+   AI pseudo-documents from calib/ai/general: n=6, PASS 0%
+   AI pseudo-documents from calib/ai_haiku/general: n=6, PASS 0%
+fr.scientific human long texts: n=150, scored in windows: 150, windows per text median 3.0, PASS 91%
+   AI pseudo-documents from calib/fr/ai_sonnet/scientific: n=10, PASS 0%
+   AI pseudo-documents from calib/fr/ai_haiku/scientific: n=10, PASS 0%
+fr.general human long texts: n=100, scored in windows: 100, windows per text median 2.0, PASS 90%
+   AI pseudo-documents from calib/fr/ai_sonnet/general: n=6, PASS 0%
+   AI pseudo-documents from calib/fr/ai_haiku/general: n=6, PASS 0%

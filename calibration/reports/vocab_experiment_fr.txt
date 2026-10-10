@@ -1,0 +1,84 @@
+
+## fr.scientific at 450 words: human n=174, AI sonnet n=30, haiku n=30
+estimator                            AUC sonnet  AUC haiku     split-r    drift  human median -> AI medians
+raw TTR (lemmas)                     0.76        0.74            0.47    -3.31  0.443 -> 0.475 / 0.476
+types@100 forms (rarefied)           0.81        0.74            0.58    +0.61  0.731 -> 0.751 / 0.746
+types@100 lemmas (rarefied)          0.85        0.78            0.62    +0.53  0.644 -> 0.674 / 0.666
+hapax@100 lemmas (rarefied)          0.84        0.81            0.67    +0.59  0.52 -> 0.555 / 0.556
+hapax per 100-window forms (v1)      0.90        0.82            0.59    +0.17  0.562 -> 0.631 / 0.617
+MATTR-50 forms (v1)                  0.90        0.79            0.53    +0.22  0.81 -> 0.85 / 0.834
+MATTR-50 lemmas                      0.90        0.78            0.53    +0.18  0.719 -> 0.765 / 0.744
+MATTR-100 lemmas                     0.91        0.82            0.59    +0.18  0.629 -> 0.683 / 0.666
+MTLD two-pass forms (v1)             0.90        0.83            0.47    +0.15  87.8 -> 122 / 118
+MTLD wrap lemmas                     0.90        0.79            0.57    +0.17  44.5 -> 64.4 / 56.2
+Yule K lemmas (negated)              0.71        0.56            0.43    +0.28  -270 -> -235 / -267
+dispersion-50 lemmas                 0.88        0.69            0.12    -0.66  0.992 -> 1.01 / 1
+content types@50                     0.78        0.66            0.66    +0.61  0.9 -> 0.927 / 0.921
+content types@100                    0.76        0.65            0.65     +nan  0.831 -> 0.869 / 0.858
+content MATTR-25                     0.89        0.78            0.55    +0.01  0.933 -> 0.97 / 0.956
+function types@50                    0.58        0.16            0.35    +0.32  0.357 -> 0.367 / 0.313
+function types@100                   0.57        0.16            0.21     +nan  0.245 -> 0.251 / 0.213
+lexical density                      0.79        0.95            0.73    +0.06  0.521 -> 0.549 / 0.58
+top-5 function-word share of tokens  0.28        0.46            0.48    -0.62  0.294 -> 0.274 / 0.295
+  MATTR-50 lemmas AUC before -> after removing what 'lexical density' predicts (r=0.49 in humans): sonnet 0.90 -> 0.86; haiku 0.78 -> 0.56
+  MATTR-50 lemmas AUC before -> after removing what 'top-5 function-word share of tokens' predicts (r=-0.77 in humans): sonnet 0.90 -> 0.93; haiku 0.78 -> 0.85
+  MATTR-50 lemmas AUC before -> after removing what 'content types@50' predicts (r=0.60 in humans): sonnet 0.90 -> 0.86; haiku 0.78 -> 0.73
+  types@100 lemmas (rarefied) AUC before -> after removing what 'lexical density' predicts (r=0.49 in humans): sonnet 0.85 -> 0.79; haiku 0.78 -> 0.54
+  types@100 lemmas (rarefied) AUC before -> after removing what 'top-5 function-word share of tokens' predicts (r=-0.66 in humans): sonnet 0.85 -> 0.81; haiku 0.78 -> 0.82
+  types@100 lemmas (rarefied) AUC before -> after removing what 'content types@50' predicts (r=0.79 in humans): sonnet 0.85 -> 0.75; haiku 0.78 -> 0.74
+
+## fr.general at 450 words: human n=267, AI sonnet n=20, haiku n=19
+estimator                            AUC sonnet  AUC haiku     split-r    drift  human median -> AI medians
+raw TTR (lemmas)                     0.74        0.84            0.39    -4.54  0.46 -> 0.488 / 0.503
+types@100 forms (rarefied)           0.70        0.85            0.56    +0.32  0.735 -> 0.751 / 0.766
+types@100 lemmas (rarefied)          0.71        0.79            0.57    +0.34  0.653 -> 0.673 / 0.681
+hapax@100 lemmas (rarefied)          0.77        0.85            0.54    +0.47  0.533 -> 0.564 / 0.568
+hapax per 100-window forms (v1)      0.80        0.87            0.37    -0.04  0.58 -> 0.617 / 0.635
+MATTR-50 forms (v1)                  0.79        0.83            0.43    -0.16  0.818 -> 0.844 / 0.845
+MATTR-50 lemmas                      0.73        0.73            0.53    -0.10  0.734 -> 0.757 / 0.759
+MATTR-100 lemmas                     0.81        0.82            0.46    -0.12  0.644 -> 0.681 / 0.682
+MTLD two-pass forms (v1)             0.79        0.87            0.46    -0.05  94.8 -> 122 / 127
+MTLD wrap lemmas                     0.69        0.76            0.57    +0.00  49.9 -> 57 / 62.5
+Yule K lemmas (negated)              0.46        0.56            0.56    +0.11  -255 -> -263 / -242
+dispersion-50 lemmas                 0.82        0.65            0.10    -0.89  0.995 -> 1.01 / 1
+content types@50                     0.73        0.70            0.55    +0.39  0.911 -> 0.936 / 0.929
+content types@100                    0.73        0.73            0.56    +0.22  0.849 -> 0.883 / 0.882
+content MATTR-25                     0.86        0.79            0.38    -0.25  0.946 -> 0.974 / 0.966
+function types@50                    0.49        0.46            0.76    +0.27  0.361 -> 0.358 / 0.352
+function types@100                   0.52        0.54            0.54     +nan  0.248 -> 0.246 / 0.252
+lexical density                      0.68        0.83            0.90    -0.03  0.527 -> 0.544 / 0.562
+top-5 function-word share of tokens  0.52        0.45            0.64    -0.48  0.285 -> 0.289 / 0.28
+  MATTR-50 lemmas AUC before -> after removing what 'lexical density' predicts (r=0.60 in humans): sonnet 0.73 -> 0.75; haiku 0.73 -> 0.67
+  MATTR-50 lemmas AUC before -> after removing what 'top-5 function-word share of tokens' predicts (r=-0.84 in humans): sonnet 0.73 -> 0.90; haiku 0.73 -> 0.85
+  MATTR-50 lemmas AUC before -> after removing what 'content types@50' predicts (r=0.26 in humans): sonnet 0.73 -> 0.68; haiku 0.73 -> 0.70
+  types@100 lemmas (rarefied) AUC before -> after removing what 'lexical density' predicts (r=0.53 in humans): sonnet 0.71 -> 0.72; haiku 0.79 -> 0.76
+  types@100 lemmas (rarefied) AUC before -> after removing what 'top-5 function-word share of tokens' predicts (r=-0.76 in humans): sonnet 0.71 -> 0.80; haiku 0.79 -> 0.86
+  types@100 lemmas (rarefied) AUC before -> after removing what 'content types@50' predicts (r=0.49 in humans): sonnet 0.71 -> 0.62; haiku 0.79 -> 0.75
+
+## fr.abstract at 200 words: human n=128, AI sonnet n=20, haiku n=12
+estimator                            AUC sonnet  AUC haiku     split-r    drift  human median -> AI medians
+raw TTR (lemmas)                     0.66        0.57            0.02     +nan  0.512 -> 0.543 / 0.521
+types@100 forms (rarefied)           0.60        0.52            0.33     +nan  0.694 -> 0.709 / 0.701
+types@100 lemmas (rarefied)          0.65        0.55            0.45     +nan  0.614 -> 0.635 / 0.623
+hapax@100 lemmas (rarefied)          0.68        0.61            0.41     +nan  0.477 -> 0.511 / 0.497
+hapax per 100-window forms (v1)      0.72        0.61            0.34     +nan  0.54 -> 0.573 / 0.56
+MATTR-50 forms (v1)                  0.62        0.53            0.15     +nan  0.796 -> 0.811 / 0.802
+MATTR-50 lemmas                      0.65        0.55            0.27     +nan  0.705 -> 0.724 / 0.714
+MATTR-100 lemmas                     0.68        0.60            0.47     +nan  0.613 -> 0.642 / 0.626
+MTLD two-pass forms (v1)             0.67        0.57            0.34     +nan  77 -> 85 / 83.3
+MTLD wrap lemmas                     0.61        0.49            0.28     +nan  39.4 -> 43.4 / 41.1
+Yule K lemmas (negated)              0.44        0.35            0.28     +nan  -323 -> -327 / -334
+dispersion-50 lemmas                 0.61        0.67            0.13     +nan  1 -> 1.01 / 1.02
+content types@50                     0.65        0.52            0.51     +nan  0.868 -> 0.894 / 0.876
+content types@100                    0.63        0.49             nan     +nan  0.795 -> 0.814 / 0.796
+content MATTR-25                     0.80        0.65            0.33     +nan  0.934 -> 0.964 / 0.952
+function types@50                    0.43        0.10             nan     +nan  0.314 -> 0.306 / 0.258
+function types@100                     -           -              nan     +nan  0.208 -> 0.212 / -
+lexical density                      0.68        0.93            0.35     +nan  0.533 -> 0.548 / 0.58
+top-5 function-word share of tokens  0.51        0.62            0.31     +nan  0.322 -> 0.319 / 0.331
+  MATTR-50 lemmas AUC before -> after removing what 'lexical density' predicts (r=0.56 in humans): sonnet 0.65 -> 0.55; haiku 0.55 -> 0.17
+  MATTR-50 lemmas AUC before -> after removing what 'top-5 function-word share of tokens' predicts (r=-0.67 in humans): sonnet 0.65 -> 0.71; haiku 0.55 -> 0.65
+  MATTR-50 lemmas AUC before -> after removing what 'content types@50' predicts (r=0.64 in humans): sonnet 0.65 -> 0.58; haiku 0.55 -> 0.55
+  types@100 lemmas (rarefied) AUC before -> after removing what 'lexical density' predicts (r=0.64 in humans): sonnet 0.65 -> 0.54; haiku 0.55 -> 0.12
+  types@100 lemmas (rarefied) AUC before -> after removing what 'top-5 function-word share of tokens' predicts (r=-0.61 in humans): sonnet 0.65 -> 0.71; haiku 0.55 -> 0.65
+  types@100 lemmas (rarefied) AUC before -> after removing what 'content types@50' predicts (r=0.84 in humans): sonnet 0.65 -> 0.54; haiku 0.55 -> 0.55

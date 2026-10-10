@@ -1,0 +1,33 @@
+scientific   human 145 texts, AI 60 texts
+abstract     human 86 texts, AI 40 texts
+general      human 358 texts, AI 68 texts
+
+AUC = P(AI rate > human rate); held-out = lists built on the other half of the documents
+register     list            in-sample  held-out
+scientific   glue                0.044     0.049
+scientific   human_function      0.104     0.170
+scientific   ai_function         0.962     0.924
+scientific   ai_content          0.984     0.907
+scientific   human_content       0.146     0.385
+abstract     glue                0.045     0.056
+abstract     human_function      0.271     0.353
+abstract     ai_function         0.881     0.865
+abstract     ai_content          0.922     0.759
+abstract     human_content       0.128     0.265
+general      glue                0.043     0.048
+general      human_function      0.110     0.209
+general      ai_function         0.919     0.849
+general      ai_content          0.924     0.842
+general      human_content       0.334     0.525
+
+glue (5): the -14/-11/-20, of -10/-6/-11, be -14/-9/-15, to -4/-5/-12, in -13/-2/-12
+
+ai_function (16): rather +8/+4/+12, how +11/+5/+7, across +9/+6/+7, than +5/+2/+11, or +4/+2/+10, where +6/+2/+6, toward +5/+1/+7, what +7/+0/+5, through +7/+5/+3, without +3/+1/+7, itself +6/-0/+4, beyond +5/+1/+4, yet +3/+2/+4, within +4/+3/+2, might +4/-0/+3, single +3/-1/+3
+
+ai_content (39): require +8/+2/+9, pattern +6/+1/+9, represent +6/+4/+4, approach +5/+4/+3, substantial +7/+2/+6, actually +5/+7, particularly +5/+2/+7, specific +4/+2/+8, reflect +7/-1/+4, create +5/+2/+6, broad +6/-0/+5, suggest +6/-1/+5, shape +5/-0/+6, substantially +5/+3/+6, shift +5/+0/+5, particular +4/-2/+6, kind +5/-1/+4, structure +2/+4/+5, attention +4/-0/+6, establish +4/+0/+5, condition +5/+3/+4, system +4/+2/+5, decade +3/+1/+6, practical +5/+4/+5, mechanism +4/+4/+3, remain +5/+3/+3, address +4/-1/+5, challenge +4/+1/+4, capture +5/+3/+1, multiple +4/+2/+4, quality +4/+1/+4, framework +4/+4/+1, reveal +4/+1/+4, offer +4/+2/+3, extend +3/+2/+4, enable +4/+3/+2, manage +4/+1/+3, examine +4/+3/+2, matter +3/+3/+4
+
+human_content (9): study -7/-3/-1, use -5/-5/+0, example -5/-2/-4, show -5/-2/-3, lead -4/+0/-4, base -4/-3/-2, include -4/-1/-3, part -3/-1/-4, know -3/-1/-3
+
+human_function (11): as -7/-2/-7, also -5/-4/-4, there -6/-2/-6, on -4/-2/-8, by -4/-3/-7, we -4/-1/-6, will -5/-2/-4, after -4/-0/-4, all -4/-2/-3, such -4/-2/-4, very -4/-1/-4
+
+wrote scripts/data/markers_en.json
