@@ -1,0 +1,12 @@
+# Text files are stored and checked out with LF endings, so that word counts and tests agree on every system
+* text=auto eol=lf
+*.gz binary
+*.zip binary
+
+# Data and generated files: keep them out of language statistics and collapse them in diffs
+scripts/data/*.tsv linguist-generated
+scripts/data/*.json linguist-generated
+calibration/reports/* linguist-generated
+references/calibration-tables.md linguist-generated
+examples/** linguist-documentation
+evals/files/** linguist-documentation

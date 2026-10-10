@@ -1,0 +1,303 @@
+{
+ "lang": "fr",
+ "glue": [
+  "être",
+  "en",
+  "avoir",
+  "dans"
+ ],
+ "glue_reference": 6.5,
+ "human_function": [
+  "il",
+  "nous",
+  "on",
+  "très",
+  "alors"
+ ],
+ "ai_function": [
+  "ce"
+ ],
+ "ai_content": [
+  "constituer",
+  "demeurer",
+  "offrir",
+  "contexte",
+  "largement",
+  "décennie",
+  "compréhension",
+  "particulièrement",
+  "révéler",
+  "contribuer",
+  "rester",
+  "directement",
+  "majeur",
+  "plutôt",
+  "critique",
+  "créer",
+  "enjeu",
+  "reconnaître",
+  "simple",
+  "approche",
+  "réduire"
+ ],
+ "human_content": [
+  "faire"
+ ],
+ "provenance": {
+  "method": "log-odds with informative Dirichlet prior; |z| >= 3 in >= 2 registers, same sign, no register opposite; see references/calibration.md",
+  "registers": {
+   "scientific": {
+    "human_texts": 223,
+    "ai_texts": 60
+   },
+   "abstract": {
+    "human_texts": 192,
+    "ai_texts": 40
+   },
+   "general": {
+    "human_texts": 333,
+    "ai_texts": 40
+   }
+  },
+  "auc": {
+   "scientific": {
+    "glue": {
+     "in_sample": 0.026,
+     "held_out": 0.039
+    },
+    "human_function": {
+     "in_sample": 0.195,
+     "held_out": 0.246
+    },
+    "ai_function": {
+     "in_sample": 0.853,
+     "held_out": 0.756
+    },
+    "ai_content": {
+     "in_sample": 0.979,
+     "held_out": 0.907
+    },
+    "human_content": {
+     "in_sample": 0.321,
+     "held_out": 0.314
+    }
+   },
+   "abstract": {
+    "glue": {
+     "in_sample": 0.05,
+     "held_out": 0.053
+    },
+    "human_function": {
+     "in_sample": 0.122,
+     "held_out": 0.179
+    },
+    "ai_function": {
+     "in_sample": 0.628,
+     "held_out": 0.443
+    },
+    "ai_content": {
+     "in_sample": 0.847,
+     "held_out": 0.783
+    },
+    "human_content": {
+     "in_sample": 0.432,
+     "held_out": 0.435
+    }
+   },
+   "general": {
+    "glue": {
+     "in_sample": 0.182,
+     "held_out": 0.216
+    },
+    "human_function": {
+     "in_sample": 0.312,
+     "held_out": 0.354
+    },
+    "ai_function": {
+     "in_sample": 0.631,
+     "held_out": 0.754
+    },
+    "ai_content": {
+     "in_sample": 0.876,
+     "held_out": 0.764
+    },
+    "human_content": {
+     "in_sample": 0.335,
+     "held_out": 0.353
+    }
+   }
+  },
+  "z_by_register": {
+   "ai_function": {
+    "ce": {
+     "scientific": 11.7,
+     "abstract": 2.0,
+     "general": 4.3
+    }
+   },
+   "ai_content": {
+    "constituer": {
+     "scientific": 10.0,
+     "abstract": 3.7,
+     "general": 3.4
+    },
+    "demeurer": {
+     "scientific": 9.2,
+     "abstract": 2.2,
+     "general": 6.6
+    },
+    "offrir": {
+     "scientific": 6.6,
+     "abstract": 8.3,
+     "general": 2.3
+    },
+    "contexte": {
+     "scientific": 9.4,
+     "abstract": 0.7,
+     "general": 3.0
+    },
+    "largement": {
+     "scientific": 5.0,
+     "abstract": 0.3,
+     "general": 6.9
+    },
+    "décennie": {
+     "scientific": 3.2,
+     "abstract": -0.7,
+     "general": 7.8
+    },
+    "compréhension": {
+     "scientific": 5.7,
+     "abstract": 5.1,
+     "general": -0.4
+    },
+    "particulièrement": {
+     "scientific": 7.3,
+     "abstract": 2.7,
+     "general": 3.4
+    },
+    "révéler": {
+     "scientific": 6.1,
+     "abstract": 4.3,
+     "general": 1.6
+    },
+    "contribuer": {
+     "scientific": 4.7,
+     "abstract": 5.3,
+     "general": -0.8
+    },
+    "rester": {
+     "scientific": 3.1,
+     "abstract": 1.4,
+     "general": 6.3
+    },
+    "directement": {
+     "scientific": 4.0,
+     "abstract": 0.8,
+     "general": 4.7
+    },
+    "majeur": {
+     "scientific": 3.9,
+     "abstract": 1.6,
+     "general": 4.8
+    },
+    "plutôt": {
+     "scientific": 3.4,
+     "abstract": 0.7,
+     "general": 4.9
+    },
+    "critique": {
+     "scientific": 4.3,
+     "abstract": 3.9,
+     "general": 1.0
+    },
+    "créer": {
+     "scientific": 4.1,
+     "abstract": 0.5,
+     "general": 4.0
+    },
+    "enjeu": {
+     "scientific": 4.3,
+     "abstract": -1.1,
+     "general": 3.7
+    },
+    "reconnaître": {
+     "scientific": 4.6,
+     "abstract": 0.4,
+     "general": 3.4
+    },
+    "simple": {
+     "scientific": 3.8,
+     "abstract": 1.6,
+     "general": 3.3
+    },
+    "approche": {
+     "scientific": 3.9,
+     "abstract": 3.1,
+     "general": 1.7
+    },
+    "réduire": {
+     "scientific": 3.4,
+     "abstract": 3.3,
+     "general": 1.8
+    }
+   },
+   "human_content": {
+    "faire": {
+     "scientific": -4.8,
+     "abstract": -1.8,
+     "general": -3.9
+    }
+   },
+   "human_function": {
+    "il": {
+     "scientific": -7.2,
+     "abstract": -4.3,
+     "general": -5.0
+    },
+    "nous": {
+     "scientific": -6.2,
+     "abstract": -6.3,
+     "general": -3.5
+    },
+    "on": {
+     "scientific": -5.6,
+     "abstract": -3.0,
+     "general": -2.4
+    },
+    "très": {
+     "scientific": -4.4,
+     "abstract": -2.4,
+     "general": -3.7
+    },
+    "alors": {
+     "scientific": -3.6,
+     "abstract": -1.8,
+     "general": -4.3
+    }
+   },
+   "glue": {
+    "être": {
+     "scientific": -16.6,
+     "abstract": -10.1,
+     "general": -9.9
+    },
+    "en": {
+     "scientific": -5.1,
+     "abstract": -3.0,
+     "general": -7.4
+    },
+    "avoir": {
+     "scientific": -12.6,
+     "abstract": -7.6,
+     "general": -6.6
+    },
+    "dans": {
+     "scientific": -4.3,
+     "abstract": -5.5,
+     "general": -1.1
+    }
+   }
+  }
+ }
+}

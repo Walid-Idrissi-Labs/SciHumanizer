@@ -1,0 +1,19 @@
+# Python
+__pycache__/
+*.py[cod]
+
+# macOS
+.DS_Store
+
+# Editors
+.vscode/
+.idea/
+
+# Working files written next to drafts by the scripts
+*.probe.json
+
+# Calibration data: corpora, measurements and generated texts are fetched or built, never committed
+calibration/workspace
+
+# Results of eval runs
+evals/results/

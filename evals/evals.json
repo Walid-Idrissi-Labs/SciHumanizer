@@ -1,0 +1,164 @@
+{
+  "skill_name": "scihumanizer",
+  "notes": "Input files are in evals/files/. $S is the skill directory. Expectations that name a script are checked by running it on the delivered text; the others are checked by reading.",
+  "evals": [
+    {
+      "id": 1,
+      "name": "rewrite-scientific-intro-en",
+      "prompt": "My AI assistant drafted this Introduction for my paper (evals/files/sci_intro_draft.md). It reads like AI: long sentences, generic, no specifics. Please humanize it so it reads like a careful researcher wrote it. Keep every claim. Here is my abstract for the facts:\n\nBackground: Heat-related morbidity is rising, but the contribution of intra-urban temperature differences is unclear. Methods: We linked daily land-surface temperature estimates at 1 km resolution to 1.9 million emergency admissions of adults aged 65+ in 12 European cities (2008-2018) and fitted distributed-lag non-linear models. Results: Admissions rose 11% (95% CI 8-14%) on days above the 95th temperature percentile compared with the median. The excess risk was 1.6 times higher in the hottest urban quintile than in the coolest. Respiratory and renal admissions drove most of the excess; cardiovascular admissions showed no clear association. Conclusions: Intra-urban heat exposure, not only city-wide temperature, shapes heat-related morbidity in older adults.",
+      "expected_output": "A rewritten Introduction of about the draft's length that keeps every claim, adds no facts beyond the draft and the abstract, passes the English scientific gate without overshooting into plain-language prose, and ends with a short verification block.",
+      "files": [
+        "evals/files/sci_intro_draft.md"
+      ],
+      "expectations": [
+        "sci_metrics.py analyze FINAL --register scientific reports the style gate as PASS (composite within the threshold, at most one classic violation, over-correction within its limit)",
+        "The composite of the final text is lower than the draft's (1.57)",
+        "No far-side dimension of 2 or more remains unless the verification block explains it; in particular field terms (thermoregulatory, cardiovascular, intra-urban, land-surface temperature) are kept, not replaced by lay words",
+        "sci_metrics.py count FINAL --target-words 700 reports ON TARGET (630-770 words), or the block explains the difference",
+        "fact_ledger.py DRAFT FINAL --facts ABSTRACT exits 0: no number or citation missing or added",
+        "No number, place, cohort size or effect estimate appears that is absent from both the draft and the abstract",
+        "No rhetorical questions, slang, first-person anecdotes or em dashes added",
+        "A verification block reports the gate before and after, the fact-ledger result, what remains on the AI side, and unresolved items"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "write-scientific-discussion-en",
+      "prompt": "I'm writing a paper titled \"A low-cost acoustic sensor network for monitoring bat activity along highways\". Main findings: 38 sensors (US$45 each) deployed along 60 km of highway for 14 months recorded 212,000 bat passes; activity dropped 61% within 50 m of lit road sections compared with unlit ones; species detection agreed with expert manual review in 89% of a 2,000-call validation sample, but the classifier confused two Myotis species in 23% of cases; 9 sensors failed in winter because of battery issues. Please draft the Discussion section (about 700 words). Plain paragraphs, no headings, no reference citations.",
+      "expected_output": "A Discussion of 630-770 words (or shorter with a stated reason) that uses the given numbers accurately, interprets them with calibrated hedging, states the limitations with their consequences, invents no citations or data, shows any derived number as arithmetic, and passes the scientific gate.",
+      "files": [],
+      "expectations": [
+        "sci_metrics.py analyze FINAL --register scientific --target-words 700 reports the style gate as PASS",
+        "The length check reports ON TARGET, or the text is shorter and the verification block says which material would be needed to reach 700 words",
+        "fact_ledger.py BRIEF FINAL --write exits 0: every number is in the brief or is listed as arithmetic on brief numbers of the same paragraph (for example 1,710 = 38 x 45)",
+        "Derived numbers, if any, are shown with their arithmetic in the verification block",
+        "No reference citations or named prior studies are invented; general-knowledge statements are flagged as such",
+        "Both limitations (Myotis confusion; winter battery failures) are discussed with their consequence for the conclusions",
+        "The final paragraph does not open with 'In conclusion' or close on generic future-research boilerplate",
+        "No sentence exists only to reach the length: no announcements ('It is worth noting'), significance echoes or closing summaries"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "write-general-oped-en",
+      "prompt": "Write an opinion column (about 600 words) arguing that public libraries should stay open until midnight.",
+      "expected_output": "An op-ed of 540-660 words with a clear stance and concrete reasoning, no statistics or named sources presented as facts, no stock phrasing; passes the general gate, and the verification block says honestly that no facts were supplied.",
+      "files": [],
+      "expectations": [
+        "sci_metrics.py analyze FINAL --register general --target-words 600 reports the style gate as PASS and the length ON TARGET",
+        "The column takes a clear position and answers at least one real objection (cost, staffing, safety, demand)",
+        "No statistics, named studies, named libraries or quotes are presented as real facts",
+        "General-knowledge statements that carry a figure (for example typical closing times) are flagged in the verification block for the user to confirm",
+        "No stock opener ('In today's...', 'In recent years...') and no formulaic ending ('In conclusion', 'Ultimately' followed by a moral)",
+        "If a growth check between drafts was THIN, the verification block says so and why"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "rewrite-general-review-en",
+      "prompt": "Here's a hotel review I had an AI write for me (evals/files/review_draft.md) but it sounds fake. Facts: room was clean, location was great, but the air conditioning broke on the hottest night and the front desk took nine hours to respond. Make it sound like a real guest wrote it.",
+      "expected_output": "A review built on the four supplied facts, with the grievance at its real strength. The draft's invented specifics (star rating, walking time, call times, refund and so on) are removed or listed for the user to confirm. The gate passes, or the text is under 150 words and the block says the gate does not apply.",
+      "files": [
+        "evals/files/review_draft.md"
+      ],
+      "expectations": [
+        "sci_metrics.py analyze FINAL --register general reports the style gate as PASS, or the verification block explains that a text under 150 words gets no gate",
+        "The nine-hour response time and the broken air conditioning are both stated plainly, without apology or politeness templates",
+        "Specifics that appear in the AI draft but not in the user's facts ('3 out of 5 stars', 'eight-minute walk', '9 p.m.', 'manager adjusted our bill') are removed or listed as questions for the user",
+        "No new incidents, staff names, prices, dates or temperatures are introduced",
+        "The text is not padded back to the draft's 505 words: its length follows from the four facts",
+        "The verification block lists which unsupported details were removed"
+      ]
+    },
+    {
+      "id": 5,
+      "name": "rewrite-scientific-intro-fr",
+      "prompt": "Mon assistant IA a rédigé cette introduction pour mon article (evals/files/intro_fr_brouillon.md). Ça fait trop IA : phrases interminables, formules creuses. Peux-tu l'humaniser pour qu'on croie lire un chercheur ? Garde toutes les affirmations. Voici mon résumé pour les faits :\n\nContexte : la morbidité liée à la chaleur augmente, mais la contribution des écarts de température à l'intérieur des villes reste mal connue. Méthodes : nous avons relié des estimations quotidiennes de la température de surface à une résolution de 1 km à 1,9 million de passages aux urgences d'adultes de 65 ans et plus dans 12 villes européennes (2008-2018), et ajusté des modèles non linéaires à retards distribués. Résultats : les passages augmentaient de 11 % (IC à 95 % : 8-14 %) les jours dépassant le 95e percentile de température par rapport à la médiane. L'excès de risque était 1,6 fois plus élevé dans le quintile urbain le plus chaud que dans le plus frais. Les causes respiratoires et rénales expliquaient l'essentiel de l'excès ; aucune association nette n'apparaissait pour les causes cardiovasculaires. Conclusions : l'exposition à la chaleur à l'échelle intra-urbaine, et pas seulement la température moyenne de la ville, détermine la morbidité liée à la chaleur chez les personnes âgées.",
+      "expected_output": "Une introduction réécrite en français, d'une longueur proche du brouillon, qui conserve les affirmations, n'ajoute aucun fait absent du brouillon et du résumé, passe la grille scientifique française et se termine par un court bloc de vérification en français.",
+      "files": [
+        "evals/files/intro_fr_brouillon.md"
+      ],
+      "expectations": [
+        "sci_metrics.py analyze FINAL --register scientific (langue détectée : français) reports the style gate as PASS",
+        "The composite of the final text is lower than the draft's (1.13), and the glue-word rate (être, en, avoir, dans) is inside the human band",
+        "fact_ledger.py DRAFT FINAL --facts RESUME exits 0",
+        "Statements of the draft that the abstract does not cover are handled by kind: a detail about the study itself (cities 'présentant des climats et des morphologies urbaines contrastés') is removed or put to the user as a question; background claims kept from the draft (reference station 'en périphérie des villes', estimates 'produites de manière routinière') are listed in the verification block as unverified",
+        "No results from the abstract (11 %, 1,6 fois, causes respiratoires et rénales) are moved into the Introduction unless the draft already stated them",
+        "French typography is respected: space before ; : ? !, guillemets « », decimal comma (1,9 million), no glued em dash",
+        "No calques or lay replacements of field terms (morbidité, thermorégulation, îlot de chaleur urbain, télédétection are kept)",
+        "The verification block is in French and reports the gate before and after, the ledger result and what was removed"
+      ]
+    },
+    {
+      "id": 6,
+      "name": "write-general-tribune-fr",
+      "prompt": "Rédige une tribune (environ 600 mots) défendant l'idée que les bibliothèques municipales devraient rester ouvertes jusqu'à minuit.",
+      "expected_output": "Une tribune de 540 à 660 mots, avec une position nette et un raisonnement concret, sans statistiques ni sources inventées, qui passe la grille générale française sans tomber dans le style haché.",
+      "files": [],
+      "expectations": [
+        "sci_metrics.py analyze FINAL --register general --target-words 600 reports the style gate as PASS and the length ON TARGET",
+        "The over-correction line is within its limit: the text is not a string of sentences of ten words or fewer",
+        "No statistic, named study, named town or quotation is presented as fact (for example no 'des millions de Français')",
+        "At least one real objection (coût, sécurité, fréquentation) is answered",
+        "No stock opening (« À l'heure où », « Dans un monde où ») and no formulaic ending (« En définitive », « Il est temps de »)",
+        "French typography is respected (space before ; : ? !, guillemets)"
+      ]
+    },
+    {
+      "id": 7,
+      "name": "lengthen-with-substance-en",
+      "prompt": "This summary (evals/files/irrigation_summary.md) is for our growers' association report; they want about 300 words. Here are my trial notes (evals/files/irrigation_notes.md). Please lengthen it, but no filler.",
+      "expected_output": "A summary of 270-330 words that reaches the length with facts from the notes, quantities derived from them and their consequences, with every number traceable; the growth check is not PADDING.",
+      "files": [
+        "evals/files/irrigation_summary.md",
+        "evals/files/irrigation_notes.md"
+      ],
+      "expectations": [
+        "sci_metrics.py count FINAL --target-words 300 reports ON TARGET",
+        "sci_metrics.py growth evals/files/irrigation_summary.md FINAL --register scientific --source evals/files/irrigation_notes.md reports SUBSTANCE (or THIN with every listed sentence justified in the block); never PADDING",
+        "fact_ledger.py evals/files/irrigation_summary.md FINAL --facts evals/files/irrigation_notes.md exits 0",
+        "Added numbers that are not in the notes are arithmetic on the notes' numbers (for example 630 m3/ha or 34% less water) and are shown as such in the verification block",
+        "The added text uses notes material that the summary lacked: at least four of rainfall, season length, pump energy, berry sugar, sensor failures, labour, p-value, soil and single-season limits",
+        "No announcement, significance echo, comment clause after a comma or closing summary was added",
+        "sci_metrics.py analyze FINAL --register scientific reports the style gate as PASS",
+        "sci_metrics.py analyze FINAL --register scientific --target-words 300 --source evals/files/irrigation_notes.md does not print CHECK THE LENGTH (under a quarter of the words in sentences not anchored in the notes)"
+      ]
+    },
+    {
+      "id": 8,
+      "name": "length-the-source-cannot-carry-en",
+      "prompt": "Same trial as before: summary in evals/files/irrigation_summary.md, notes in evals/files/irrigation_notes.md. The association has changed its mind and now wants 700 words. I have nothing beyond these notes. Can you get it to 700?",
+      "expected_output": "The text is lengthened as far as the notes support (roughly 250-400 words) and delivered with its word count and a plain statement that 700 words cannot be reached without filler, plus a list of the material that would fill the rest. It is not padded to 700.",
+      "files": [
+        "evals/files/irrigation_summary.md",
+        "evals/files/irrigation_notes.md"
+      ],
+      "expectations": [
+        "The delivered text is clearly shorter than 630 words, and the response says so with the actual count",
+        "The response explains that the notes do not support 700 words and lists what further material would (for example another season or site, costs, how the fixed schedule was chosen)",
+        "sci_metrics.py growth evals/files/irrigation_summary.md FINAL --register scientific --source evals/files/irrigation_notes.md reports SUBSTANCE, with under a quarter of the added words in unanchored sentences",
+        "fact_ledger.py evals/files/irrigation_summary.md FINAL --facts evals/files/irrigation_notes.md exits 0: no invented numbers, sites, seasons or costs",
+        "The text contains no generic paragraphs about the importance of water management, sustainability or future research added to gain length",
+        "The response states the limit before or with the text, not buried after it, and does not describe a padded text as on target"
+      ]
+    },
+    {
+      "id": 9,
+      "name": "audit-tribune-fr",
+      "prompt": "Est-ce que ce texte (evals/files/tribune_fr_brouillon.md) fait « écrit par une IA » ? Ne le réécris pas : dis-moi seulement ce qui cloche, avec les phrases concernées, et les cinq corrections les plus utiles.",
+      "expected_output": "Un audit en français, sans réécriture : verdict de la grille, constats par dimension avec numéros de phrases, affirmations non étayées signalées, cinq corrections prioritaires, et la précision que ces mesures décrivent la prose et ne prouvent pas qui a écrit le texte.",
+      "files": [
+        "evals/files/tribune_fr_brouillon.md"
+      ],
+      "expectations": [
+        "The response reports the gate result from sci_metrics.py analyze --register general --sentences (the draft fails; composite about 0.98)",
+        "Findings are organised by dimension and cite sentence numbers or quote the sentences concerned (for example the share of sentences of ten words or fewer, the « Deuxièmement / Troisièmement » scaffolding, repeated sentence frames, glued em dashes)",
+        "Unsupported factual claims are flagged (for example « Des millions de Français effectuent des travaux décalés »)",
+        "Exactly the requested output: no rewritten version of the text is produced",
+        "Five prioritised corrections are given, each tied to a measured finding",
+        "The response states that the statistics describe the prose and are not proof of authorship",
+        "The response is in French"
+      ]
+    }
+  ]
+}
