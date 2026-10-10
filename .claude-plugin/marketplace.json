@@ -1,0 +1,15 @@
+{
+  "name": "scihumanizer",
+  "description": "SciHumanizer, a research-calibrated writing skill for English and French",
+  "owner": {
+    "name": "Walid Idrissi",
+    "url": "https://github.com/Walid-Idrissi-Labs"
+  },
+  "plugins": [
+    {
+      "name": "scihumanizer",
+      "source": "./",
+      "description": "Writes or rewrites English and French prose without the measurable habits of AI text, and checks the result against human writing."
+    }
+  ]
+}

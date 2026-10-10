@@ -1,0 +1,23 @@
+cff-version: 1.2.0
+message: "If you use this skill or its calibration data in your work, please cite it as below."
+title: "SciHumanizer: a research-calibrated writing skill for English and French"
+type: software
+authors:
+  - family-names: Idrissi
+    given-names: Walid
+version: "2.0.0"
+date-released: 2026-10-10
+license: MIT
+repository-code: "https://github.com/Walid-Idrissi-Labs/SciHumanizer"
+url: "https://github.com/Walid-Idrissi-Labs/SciHumanizer"
+abstract: >-
+  A skill that writes and rewrites English and French prose without the measurable habits of
+  machine-generated text and verifies the result with scripts: a style gate calibrated on human
+  writing by language, register and length, a fact ledger, and a length check that refuses
+  padding.
+keywords:
+  - academic writing
+  - machine-generated text
+  - stylometry
+  - French
+  - agent skill

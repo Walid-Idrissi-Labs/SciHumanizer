@@ -1,0 +1,14 @@
+{
+  "name": "scihumanizer",
+  "displayName": "SciHumanizer",
+  "version": "2.0.0",
+  "description": "Writes or rewrites English and French prose without the measurable habits of AI text, then checks the result with scripts: style bands by language, register and length, a fact ledger, and a length check that refuses padding.",
+  "author": {
+    "name": "Walid Idrissi",
+    "url": "https://github.com/Walid-Idrissi-Labs"
+  },
+  "homepage": "https://github.com/Walid-Idrissi-Labs/SciHumanizer",
+  "repository": "https://github.com/Walid-Idrissi-Labs/SciHumanizer",
+  "license": "MIT",
+  "keywords": ["writing", "humanizer", "academic-writing", "editing", "french", "stylometry"]
+}

@@ -1,0 +1,57 @@
+name: Misjudged text
+description: A human text that fails the gate, or an unedited AI text that passes it
+labels: ["calibration"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        About one human text in seven fails by design, so one text proves little. Several texts of the same kind that fail on the same dimension are a finding.
+  - type: dropdown
+    id: kind
+    attributes:
+      label: What happened
+      options:
+        - A human text fails the gate
+        - An unedited AI text passes the gate
+        - A rewrite made with the skill still reads as machine text
+    validations:
+      required: true
+  - type: dropdown
+    id: language
+    attributes:
+      label: Language
+      options: [English, French]
+    validations:
+      required: true
+  - type: dropdown
+    id: register
+    attributes:
+      label: Register used
+      options: [scientific, abstract, general]
+    validations:
+      required: true
+  - type: input
+    id: origin
+    attributes:
+      label: Where the text comes from
+      description: For a human text, the kind of document and its date. For an AI text, the model and the request.
+    validations:
+      required: true
+  - type: textarea
+    id: report
+    attributes:
+      label: First lines of the report
+      description: The output of `python3 scripts/sci_metrics.py analyze FILE --register R`, from the gate line to the end of the dimension list.
+      render: text
+    validations:
+      required: true
+  - type: textarea
+    id: text
+    attributes:
+      label: The text, or a link to it
+      description: Paste it only if you have the right to share it.
+  - type: input
+    id: version
+    attributes:
+      label: Version of the skill
+      placeholder: "2.0.0"
