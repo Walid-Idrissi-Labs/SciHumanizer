@@ -30,7 +30,7 @@ python3 scripts/sci_metrics.py selftest      # the analyzer's invariants and the
 
 The suite scores the texts in `examples/` and compares the verdicts and composites with the documented ones. If your change moves one of them, either the change is wrong or the documentation has to move with it; say which in the pull request. A change to the metrics also changes the measurements, so the calibration has to be rebuilt before the numbers mean anything (`calibration/README.md`).
 
-The README is held to the gate that it describes (`python3 scripts/sci_metrics.py analyze README.md --register general` must pass, and CI checks it). If you edit its prose, run that command first.
+The README is held to the gate that it describes (`python3 scripts/sci_metrics.py analyze README.md --register general` must pass, and the test suite checks it). If you edit its prose, run that command first.
 
 ## New models, registers and languages
 

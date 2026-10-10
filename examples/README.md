@@ -41,4 +41,4 @@ python3 $S/sci_metrics.py analyze examples/E-write-tribune-fr/draft_v1.md --regi
 python3 $S/fact_ledger.py examples/C-write-discussion-en/brief.md examples/C-write-discussion-en/final.md --write
 ```
 
-The registers are `scientific` for A to D and `general` for E and F. The same checks run in CI (`tests/test_skill.py`), so a change to the scripts or to the calibration that moves one of these scores is noticed.
+The registers are `scientific` for A to D and `general` for E and F. The same checks are part of the test suite (`tests/test_skill.py`), so a change to the scripts or to the calibration that moves one of these scores shows up when the tests are run.

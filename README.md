@@ -3,7 +3,6 @@
 English · [Français](README.fr.md)
 
 <p>
-<a href="https://github.com/Walid-Idrissi-Labs/SciHumanizer/actions/workflows/ci.yml"><img src="https://github.com/Walid-Idrissi-Labs/SciHumanizer/actions/workflows/ci.yml/badge.svg" alt="CI"></a>
 <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="MIT licence"></a>
 <img src="https://img.shields.io/badge/python-3.8%2B-blue.svg" alt="Python 3.8 or later">
 <img src="https://img.shields.io/badge/languages-English%20%7C%20French-blue.svg" alt="English and French">
@@ -218,7 +217,7 @@ The patterns come from eleven papers on machine-generated text, its detection an
 | `examples/` | Six runs with every draft: the sources, the unedited model answers, the final texts |
 | `evals/` | Nine test requests with their input files |
 | `calibration/` | The tools that fetch the corpora, measure them and rebuild the data files, with their reports |
-| `tests/` | The checks that run in CI, which include this README against its own gate |
+| `tests/` | The test suite, which also holds this README to its own gate |
 
 To rebuild the calibration, or to add a model or a language, start with [`calibration/README.md`](calibration/README.md). The measurements behind the shipped data are attached to each release, so the calibration step can be repeated without fetching a single corpus.
 
